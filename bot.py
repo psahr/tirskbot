@@ -4,10 +4,10 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 
 TULLA_PATTERN = re.compile(
-    r'\b(tul(?:en|et|ee|emme|ette|evat|i|in|it|i|imme|itte|ivat|la|le|len|'
-    r'les|lla|lut|lisi|lisin|lisit|lisi|lisimme|lisitte|lisivat|ko|'
-    r'teko|etko|isiko|eeko|laanko|isinko|kaa|koot|tava|tavan|tavaa|'
-    r'tavalle|tavalta|taville|tavilta|tavilleen))\b',
+    r'\b(tu(?:len|let|lee|lemme|lette|levat|li|lin|lit|li|limme|litte|livat|lla|len|'
+    r'les|lla|llut|lisi|lisin|lisit|lisi|lisimme|lisitte|lisivat|liko|'
+    r'letko|lisiko|leeko|llaanko|lisinko|lkaa|lkoot|ltava|u|un|'
+    r'ut|uks|llaan|utte|ltiin))\b',
     re.IGNORECASE
 )
 
