@@ -18,7 +18,7 @@ TULLA_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-GENERAL_THREAD_ID = 1
+GENERAL_THREAD_ID = None
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message = update.message
