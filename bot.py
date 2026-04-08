@@ -11,10 +11,26 @@ TULLA_PATTERN = re.compile(
     re.IGNORECASE
 )
 
+GENERAL_THREAD_ID = 1  # Change this if your General topic has a different ID
+
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    text = update.message.text or ""
+    message = update.message
+    if not message:
+        return
+
+    # Only handle messages in the General thread/topic
+    thread_id = message.message_thread_id
+    if thread_id != GENERAL_THREAD_ID:
+        return
+
+    text = message.text or ""
     if TULLA_PATTERN.search(text):
-        await update.message.reply_text("Tirsk")
+        # Reply in the same thread by passing message_thread_id
+        await context.bot.send_message(
+            chat_id=message.chat_id,
+            text="Tirsk",
+            message_thread_id=GENERAL_THREAD_ID
+        )
 
 def main():
     token = os.environ["TELEGRAM_BOT_TOKEN"]
