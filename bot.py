@@ -20,6 +20,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Only handle messages in the General thread/topic
     thread_id = message.message_thread_id
+    print(f"Thread ID: {message.message_thread_id}")
     if thread_id != GENERAL_THREAD_ID:
         return
 
