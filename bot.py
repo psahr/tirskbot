@@ -14,7 +14,7 @@ TULLA_PATTERN = re.compile(
     r'\b(tu(?:len|let|lee|lemme|lette|levat|li|lin|lit|li|limme|litte|livat|lla|len|'
     r'les|lla|llut|lisi|lisin|lisit|lisi|lisimme|lisitte|lisivat|liko|'
     r'letko|lisiko|leeko|llaanko|lisinko|lkaa|lkoot|ltava|u|un|'
-    r'ut|uks|llaan|utte|ltiin))\b',
+    r'ut|uks|llaan|utte|ltiin|utko|letko|uksä|utsä|leeks|leekse|ukkos|uksää|lisitko|uppa|leppa|uppas))\b',
     re.IGNORECASE
 )
 
